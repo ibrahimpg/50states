@@ -110,7 +110,6 @@ const app = new Vue({
           <input v-model="target" style="width:50px; display: inline; background: none; padding: 5px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.5em;" />
           <h4 style="display: inline;">← set your target!</h4>
         </div>
-        <hr> 
       </div>
       <div style="display: flex; flex-wrap: wrap; padding: 10px;">
         <h2 v-for="state in sortedStates" style="background-color: white; margin:5px; padding:5px;">{{state}}</h2>
