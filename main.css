@@ -1,6 +1,6 @@
 * {box-sizing: border-box; margin: 0; padding: 0;}
 
-body { background: url('starring.png'), whitesmoke; }
+body { background-image: url('starring.png'), repeating-linear-gradient(to left, red, red 30px, blue 30px, blue 60px); }
 
 .container {
   display: flex; flex-direction: column;

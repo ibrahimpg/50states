@@ -103,12 +103,12 @@ const app = new Vue({
     </transition>
     
     <div>
-      <div style="padding:50px; display: flex; flex-direction:column; background-image: url('fabric.png'), linear-gradient(to left, red 50%, blue 50%);">
-        <input v-on:keyup="check()" v-on:keydown="check()" :disabled="disabled" v-model="guessText" placeholder="State..."><br>
-        <div>
+      <div style="padding:10px; display: flex; flex-direction:column; justify-content: center; align-items: center; background-color: white;">
+        <input style="width: 80%;" v-on:keyup="check()" v-on:keydown="check()" :disabled="disabled" v-model="guessText" placeholder="State..."><br>
+        <div style="margin-bottom:5px;">
           <h2 style="display: inline;">{{guessedStates.length}} / </h2>
           <input v-model="target" style="width:50px; display: inline; background: none; padding: 5px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.5em;" />
-          <h4 style="display: inline;">← set your own target!</h4>
+          <h4 style="display: inline;">← set your target!</h4>
         </div>
         <hr> 
       </div>
