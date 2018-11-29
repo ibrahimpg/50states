@@ -103,7 +103,7 @@ const app = new Vue({
     </transition>
     
     <div>
-      <div style="padding:10px; display: flex; flex-direction:column; justify-content: center; align-items: center; background-color: white;">
+      <div style="padding:10px; display: flex; flex-direction:column; justify-content: center; align-items: center; background-color: white; box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.4);">
         <input style="width: 80%;" v-on:keyup="check()" v-on:keydown="check()" :disabled="disabled" v-model="guessText" placeholder="State..."><br>
         <div style="margin-bottom:5px;">
           <h2 style="display: inline;">{{guessedStates.length}} / </h2>
