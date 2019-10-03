@@ -47,6 +47,9 @@ const app = new Vue({
         return;
       }
     },
+    iQuit: function(){
+      this.won = !this.won;
+    },
     initialState: function(){
       this.hiddenStates = [
         "Alabama", "Alaska", "Arizona", "Arkansas",
@@ -95,9 +98,12 @@ const app = new Vue({
     <transition name="fade-in">
       <div v-if="won" class="wonModal">
         <div class="innerModal">
-          <h2>You won!</h2>
-          <button v-on:click="initialState()">Play Again!</button>
-          <a href="https://www.ibrahimpg.com" target="_blank">Check out my other stuff.</a>
+          <h2>Thanks for playing!</h2><br><br>
+          <h2 v-if="hiddenStates.length >= 1">
+            You missed the following states:
+            {{this.hiddenStates.toString().replace(/,/g, ", ")}}
+          </h2>
+          <br><br><button v-on:click="initialState()">Play Again!</button><br>
         </div>
       </div>
     </transition>
@@ -109,6 +115,7 @@ const app = new Vue({
           <h2 style="display: inline;">{{guessedStates.length}} / </h2>
           <input v-model="target" style="width:50px; display: inline; background: none; padding: 5px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.5em;" />
           <h4 style="display: inline;">← set your target!</h4>
+          <button @click="iQuit()">Give Up</button>
         </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; padding: 10px;">
